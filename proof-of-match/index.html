@@ -1,439 +1,338 @@
-/* Base layout */
-html {
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #F7F8FA;
-  color: #111827;
-  line-height: 1.7;
-}
-
-.page-main {
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Header & navigation */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background-color: rgba(247, 248, 250, 0.92);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(10px);
-}
-
-.nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
-
-.logo {
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #111827;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
-  margin: 0;
-  padding: 0;
-  font-size: 0.85rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #4B5563;
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #1F3A5F;
-  border-color: rgba(31, 58, 95, 0.6);
-}
-
-/* Hero */
-.hero {
-  margin-top: 2.25rem;
-  margin-bottom: 2rem;
-  padding: 2.25rem 2rem;
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-  background: linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 50%, #EEF5FF 100%);
-  border-radius: 1.25rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
-}
-
-.hero-content {
-  flex: 2;
-}
-
-.hero-label {
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #6B7280;
-  margin: 0 0 0.75rem;
-}
-
-.hero h1 {
-  font-size: 2.05rem;
-  line-height: 1.2;
-  margin: 0 0 1rem;
-  color: #111827;
-}
-
-.hero-summary {
-  font-size: 1rem;
-  margin-bottom: 1.25rem;
-  color: #374151;
-}
-
-.hero-meta {
-  font-size: 0.85rem;
-  color: #6B7280;
-  margin-bottom: 1.5rem;
-}
-
-.hero-meta span {
-  font-weight: 500;
-  color: #111827;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.hero-aside {
-  flex: 1.1;
-  min-width: 240px;
-}
-
-.hero-aside-inner {
-  background-color: #FFFFFF;
-  border-radius: 0.9rem;
-  border: 1px solid rgba(15, 23, 42, 0.07);
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
-  overflow: hidden;
-}
-
-.hero-aside-header {
-  display: flex;
-  padding: 0.45rem 0.6rem;
-  gap: 0.25rem;
-  background-color: #F3F4F6;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-.hero-tab {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  color: #6B7280;
-}
-
-.hero-tab-active {
-  background-color: #FFFFFF;
-  color: #111827;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
-}
-
-.hero-aside-body {
-  padding: 0.85rem 1rem 0.9rem;
-}
-
-.hero-aside-title {
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: #6B7280;
-  margin: 0 0 0.4rem;
-}
-
-.hero-aside-text {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #4B5563;
-}
-
-/* Callout */
-.callout {
-  margin-bottom: 1.25rem;
-}
-
-.callout p {
-  margin: 0;
-  padding: 0.9rem 1rem;
-  border-radius: 0.75rem;
-  background-color: #E0F5F1;
-  border: 1px solid rgba(24, 169, 153, 0.32);
-  font-size: 0.9rem;
-  color: #0F172A;
-}
-
-/* Section shells */
-.section {
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.section-inner {
-  background-color: #FFFFFF;
-  border-radius: 1rem;
-  padding: 2.1rem 2rem 2rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
-}
-
-.section-label {
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #9CA3AF;
-  margin: 0 0 0.4rem;
-}
-
-.section h2 {
-  font-size: 1.55rem;
-  margin: 0 0 1.1rem;
-  color: #111827;
-}
-
-.section p {
-  margin: 0 0 0.9rem;
-  color: #374151;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1.35rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background-color: #1F3A5F;
-  color: #FFFFFF;
-  box-shadow: 0 10px 26px rgba(31, 58, 95, 0.45);
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #182b44;
-  box-shadow: 0 12px 30px rgba(31, 58, 95, 0.55);
-  transform: translateY(-1px);
-}
-
-.btn-secondary {
-  background-color: #FFFFFF;
-  color: #1F3A5F;
-  border-color: rgba(31, 58, 95, 0.25);
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background-color: #F3F4F6;
-  border-color: rgba(31, 58, 95, 0.5);
-}
-
-.prototype-btn {
-  margin-top: 1.15rem;
-}
-
-/* Users */
-.user-group {
-  margin-bottom: 1.5rem;
-}
-
-.user-group h3 {
-  font-size: 1.02rem;
-  margin-bottom: 0.3rem;
-}
-
-.user-note {
-  font-size: 0.85rem;
-  color: #6B7280;
-  margin-top: 0;
-}
-
-.user-group ul {
-  margin: 0.3rem 0 0.5rem 1.1rem;
-  padding: 0;
-}
-
-/* Cards (pain points) */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.1rem;
-  margin-top: 0.4rem;
-}
-
-.card {
-  background-color: #F9FAFB;
-  border-radius: 0.85rem;
-  border: 1px solid rgba(15, 23, 42, 0.04);
-  padding: 1rem 1.1rem 1.05rem;
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
-  font-size: 0.9rem;
-}
-
-.card h3 {
-  font-size: 0.95rem;
-  margin: 0 0 0.5rem;
-}
-
-.card p {
-  margin: 0;
-  color: #4B5563;
-}
-
-/* Signals */
-.signals-list {
-  margin: 0.6rem 0 0.4rem 1.1rem;
-  padding: 0;
-}
-
-.signals-list li {
-  margin-bottom: 0.45rem;
-}
-
-/* Subsections */
-.subsection {
-  margin-top: 1.5rem;
-}
-
-.subsection h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
-}
-
-.subsection ol {
-  margin: 0.35rem 0 0.5rem 1.1rem;
-  padding: 0;
-}
-
-.subsection li {
-  margin-bottom: 0.45rem;
-}
-
-/* Code block (Notebook-ish) */
-.code-block {
-  margin: 0.9rem 0 0.75rem;
-  padding: 0.85rem 1rem;
-  background-color: #020617;
-  border-radius: 0.8rem;
-  color: #E5E7EB;
-  font-size: 0.86rem;
-  overflow-x: auto;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.75);
-}
-
-.code-block code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-/* Footer */
-.site-footer {
-  padding: 2rem 0 2.5rem;
-  font-size: 0.8rem;
-  color: #6B7280;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .hero {
-    padding: 2rem 1.5rem;
-  }
-
-  .nav-links {
-    gap: 0.8rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-wrap: wrap;
-    row-gap: 0.4rem;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-aside {
-    width: 100%;
-  }
-
-  .section-inner {
-    padding: 1.7rem 1.4rem 1.6rem;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    margin-top: 1.6rem;
-    padding: 1.6rem 1.3rem;
-  }
-
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proof of Match – AI-powered deal-ready matching for VC & Web3 events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar container">
+      <a href="/" class="logo">Yezi Li</a>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#context">Context</a></li>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#pain-points">Pain Points</a></li>
+        <li><a href="#signals">Signals</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#matching">Matching</a></li>
+        <li><a href="#prototype">Prototype</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section id="hero" class="hero container">
+      <div class="hero-content">
+        <p class="hero-label">Case study</p>
+        <h1>Proof of Match – AI-powered deal-ready matching for VC &amp; Web3 events</h1>
+        <p class="hero-summary">
+          Proof of Match is a high-end dealflow enabler for high-intent, small-room VC and Web3 events.
+          It uses enriched signals and multi-agent matching to surface a short list of thesis-fit,
+          deal-ready counterparts across investors, founders, infra providers, and regulators.
+        </p>
+        <p class="hero-meta">
+          Role: <span>Product Manager</span> ·
+          Type: <span>AI case study</span> ·
+          Year: <span>2026</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://v2-proof-of-match-308044321110.us-west1.run.app/" target="_blank" rel="noopener noreferrer">
+            View prototype
+          </a>
+          <a class="btn btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
+            Download PDF
+          </a>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <div class="hero-aside-inner">
+          <div class="hero-aside-header">
+            <span class="hero-tab hero-tab-active">Session notebook</span>
+            <span class="hero-tab">Signals</span>
+          </div>
+          <div class="hero-aside-body">
+            <p class="hero-aside-title">Proof of Match · Event</p>
+            <p class="hero-aside-text">
+              Notebook-style view for matching runs, event cohorts, and pairing rationales.
+              This placeholder mirrors the clean, card-based feel of an AI notebook interface.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout container">
+      <p>
+        For confidentiality, this case leaves out business-sensitive details and competitor data.
+        It is inspired by a real Web3 VC conference brief; all sensitive elements have been anonymized or omitted.
+      </p>
+    </section>
+
+    <section id="overview" class="section container">
+      <div class="section-inner">
+        <p class="section-label">01 · Overview</p>
+        <h2>Overview</h2>
+        <p>
+          High-intent, small-room event organizers in the Web3 and venture capital space bring capital,
+          infrastructure, and policy decision makers together for deal-ready conversations. Today’s tools
+          lean on keyword matching and basic filters, which often match people who are superficially aligned
+          but not truly ready to do a deal, while missing non-obvious, high-value connections.
+        </p>
+        <p>
+          Proof of Match turns the event platform into a driver of trusted, deal-driven relationships for
+          private-market decision makers. It enriches sparse registration data with external signals, scores
+          counterparty fit and readiness through GenAI agents, and ranks matches so every attendee sees a
+          small, prioritized set of conversations worth taking.
+        </p>
+      </div>
+    </section>
+
+    <section id="context" class="section container">
+      <div class="section-inner">
+        <p class="section-label">02 · Context &amp; vision</p>
+        <h2>Context &amp; vision</h2>
+        <p>
+          At high-intent VC and Web3 events, attendees have a very narrow time window to make the right
+          connections. The default “search + filters + generic keywords” approach produces matches that are
+          technically relevant but not truly deal-ready. An investor might be matched with a founder who
+          fits the thesis and stated intent but is at the wrong fundraising stage or not operationally ready,
+          while founders solving similar problems may never be surfaced together.
+        </p>
+        <p>
+          The vision for Proof of Match is to be a high-end dealflow engine for small-N rooms, where capital,
+          infrastructure, and policy decisions are made. Instead of maximizing random introductions, it aims
+          to prioritize a short list of thesis-fit, mutually ready connections, backed by richer signals of
+          credibility, stage, and intent.
+        </p>
+      </div>
+    </section>
+
+    <section id="users" class="section container">
+      <div class="section-inner">
+        <p class="section-label">03 · Users &amp; JTBD</p>
+        <h2>Users &amp; jobs-to-be-done</h2>
+
+        <div class="user-group">
+          <h3>Investors / allocators</h3>
+          <ul>
+            <li>Identify a small set of thesis-fit, deal-ready founders, infra providers, and co-investors to add to the pipeline.</li>
+            <li>Understand where capital, regulation, and infrastructure are moving to refine their own theses.</li>
+          </ul>
+        </div>
+
+        <div class="user-group">
+          <h3>Founders / operators</h3>
+          <p class="user-note">(startups, infra CEOs)</p>
+          <ul>
+            <li>Secure strategic capital and a handful of the right partners (design partners, distribution, infra, regulators).</li>
+            <li>Build a targeted investor/partner map they can nurture after the event.</li>
+          </ul>
+        </div>
+
+        <div class="user-group">
+          <h3>Regulators / policymakers / public-sector innovation leads</h3>
+          <ul>
+            <li>Find serious builders and allocators to inform frameworks and potential sandboxes.</li>
+            <li>Map the ecosystem’s systemically important actors and risk areas efficiently.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="pain-points" class="section container">
+      <div class="section-inner">
+        <p class="section-label">04 · Pain points</p>
+        <h2>Pain points</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>P1 – Right counterpart, actually ready</h3>
+            <p>
+              Attendees struggle to find the few people who are both a strong strategic fit and truly ready
+              to do a real deal or pilot in the next cycle, instead of spending time on high-level chats
+              that go nowhere.
+            </p>
+          </article>
+          <article class="card">
+            <h3>P2 – Limited time, multiple intents</h3>
+            <p>
+              Time is extremely limited, and attendees juggle several goals (deploy, raise, find partners,
+              learn). They need help prioritizing a small number of meetings they can turn into long-term
+              relationships, not just more random intros.
+            </p>
+          </article>
+          <article class="card">
+            <h3>P3 – Non-obvious, cross-persona connections</h3>
+            <p>
+              High-value, cross-persona connections (e.g., a regulator or infra partner who shares an
+              underlying problem) are often missed because current tools only match on surface keywords,
+              titles, and simple filters.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="signals" class="section container">
+      <div class="section-inner">
+        <p class="section-label">05 · Connection signals</p>
+        <h2>Signals that make connections stick</h2>
+        <p>
+          From interviews, fundraising playbooks, and observing how people actually connect in VC and Web3,
+          several signals emerged as critical for whether someone will take a conversation seriously.
+        </p>
+        <ul class="signals-list">
+          <li>
+            <strong>Thesis fit first</strong> – Clear match on sector, stage, geography, and check/token economics so nobody wastes time.
+          </li>
+          <li>
+            <strong>Warm intros / shared nodes</strong> – Introductions via portfolio founders, mutual connections, or curated circles consistently beat cold outreach and raw profile browsing.
+          </li>
+          <li>
+            <strong>Proof of work</strong> – Visible shipped product, code, traction, or serious research/regulatory engagement that separates serious actors from tourists and makes everyone lean in.
+          </li>
+          <li>
+            <strong>Targeted, informed outreach</strong> – Showing you understand the other side’s mandate or constraints (fund thesis, startup runway, regulatory remit) makes the conversation feel like collaboration, not a spray-and-pray pitch.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="architecture" class="section container">
+      <div class="section-inner">
+        <p class="section-label">06 · Architecture</p>
+        <h2>Architecture</h2>
+
+        <div class="subsection">
+          <h3>Data strategy</h3>
+          <ol>
+            <li>
+              <strong>Registration as a sparse starting point</strong> – The initial form collects basic information:
+              name, company, title, ticket type, self-selected interests, and a free-text field for intent and mandate.
+              From this, the system infers high-level persona archetypes (investor, founder, regulator) and their stated goals.
+            </li>
+            <li>
+              <strong>Enrichment from public sources</strong> – To reach deal-ready conversations, the system needs
+              richer signals such as credibility, financial and operational readiness, funding stages, check size,
+              geographic focus, thesis, vertical, and regulatory/compliance tags. Public data sources are used to
+              enrich these signals beyond what attendees type into a form.
+            </li>
+            <li>
+              <strong>Guardrails and human-in-the-loop</strong> – Because LLMs can hallucinate and encode bias,
+              any scoring system must use strict, transparent definitions and human review for sensitive attributes.
+              This case study focuses on the high-level scoring and ranking design; operational guardrails are a
+              separate, expert-driven track.
+            </li>
+          </ol>
+        </div>
+
+        <div class="subsection">
+          <h3>GenAI agent architecture</h3>
+          <ol>
+            <li>
+              <strong>Data enrichment agents</strong> – Extract entities from unstructured sources (sites, profiles,
+              public documents) and output structured fields that extend the registration record.
+            </li>
+            <li>
+              <strong>Embedding &amp; similarity agents</strong> – Use embeddings and cosine similarity to capture
+              thematic overlap, primary and inherent secondary intents, and problem-space clustering.
+            </li>
+            <li>
+              <strong>Individual scoring agents</strong> – Produce per-attendee scores for credibility, financial,
+              and operational readiness (with the caveat that any such scoring must be carefully defined and audited).
+            </li>
+            <li>
+              <strong>Pair scoring agents</strong> – For each potential pair, assess persona fit (investor, founder,
+              regulator), theme and intent overlap, complementary match strength, and non-obvious problem-space ties.
+            </li>
+            <li>
+              <strong>Contextual explainer agents</strong> – Translate structured outputs into human-readable “warm
+              intro” blurbs at the UI layer, explaining why two people should meet in the language they use.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="matching" class="section container">
+      <div class="section-inner">
+        <p class="section-label">07 · Matching &amp; ranking</p>
+        <h2>Matching &amp; ranking logic</h2>
+
+        <div class="subsection">
+          <h3>Candidate generation buckets</h3>
+          <p>
+            With enriched signals in place, a candidate generation layer classifies potential pairs into
+            priority buckets. A complementary matching bucket captures high-precision matches where persona,
+            thesis, and intents align strongly. A non-obvious bucket captures pairs linked by shared problem
+            space or second-order themes (for example, two founders solving the same underlying infrastructure
+            risk from different angles).
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Persona-specific weighting</h3>
+          <p>
+            Matching scores are computed as a weighted sum of component scores: persona fit, intent overlap,
+            thematic fit, complementary strength, non-obviousness, and credibility. Each persona type
+            (investor, founder, regulator) gets its own weight vector so the ranking reflects what they care
+            about most.
+          </p>
+          <p>
+            For one persona, the matrix can be thought of as “how much this person cares” about each signal,
+            adding up to 100%. For example, an investor might weigh persona fit at 30%, intent overlap at 25%,
+            thematic fit at 20%, complementary score at 15%, non-obviousness at 0%, and credibility at 10%.
+            The same pair will rank differently for a regulator, who might care more about operational
+            readiness and systemic risk than about check size.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3>Rank score formula</h3>
+          <p>
+            To incorporate both counterparty readiness and self-readiness, the ranking layer uses persona-aware
+            playbook weights for readiness dimensions (e.g., financial vs. operational). At a high level:
+          </p>
+          <pre class="code-block"><code>rank_score = match_score × (1 + α × deal_cpty + β × deal_self)</code></pre>
+          <p>
+            Here, <em>match_score</em> is the weighted sum of component scores for a pair. The coefficients
+            α and β are persona-specific weights for “how much I care about my counterparty’s readiness”
+            and “how much I care about my own readiness”. A persona parameter γ selects which readiness
+            dimension to use (for example, financial vs. operational readiness).
+          </p>
+          <p>
+            Crucially, this makes the ranking <strong>directional</strong>: A→B ≠ B→A. An institutional allocator
+            may rank a founder very highly because they are financially and thematically ready, while the
+            regulator persona might rank the same founder lower if operational or risk-related signals are not
+            as strong from their perspective.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="section container">
+      <div class="section-inner">
+        <p class="section-label">08 · Prototype</p>
+        <h2>Prototype</h2>
+        <p>
+          The prototype focuses on the core flows of registration, onboarding into matchmaking, pre-event
+          matching and scheduling, and final schedule guidance. It demonstrates how enriched signals,
+          persona-aware scoring, and directional ranking come together in a simple UI for event organizers
+          and attendees.
+        </p>
+        <a class="btn btn-primary prototype-btn" href="https://v2-proof-of-match-308044321110.us-west1.run.app/" target="_blank" rel="noopener noreferrer">
+          Open prototype
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yezi Li · Proof of Match case study</p>
+    </div>
+  </footer>
+</body>
+</html>
