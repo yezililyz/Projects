@@ -386,4 +386,36 @@
   <p>For example:<br/>
   Investor: α = 0.60, β = 0.05, gamma: "fin"<br/>
   Regulator: α = 0.20, β = 0.05, gamma: "ops"<br/>
-  In this scenario, gamma is just the switch that chooses which readiness dial to read: for investors, gamma = "fin" means “use the finan
+  In this scenario, gamma is just the switch that chooses which readiness dial to read: for investors, gamma = "fin" means “use the financial ready score in the rank score,” while for regulators, gamma = "ops" means “use the operational ready score instead,” as it matters more to regulators.</p>
+
+  <p>Persona‑aware weighted matrix ensures the rank score is bidirectional.</p>
+
+  <p>Rank_score = Match_score × (1 + α × deal_cpty + β × deal_self). A→B ≠ B→A.</p>
+
+  <p>Same as matching scores, with each persona, the weighted attributes of each counterpart vary, making sure that each person's shortlist is ranked from their own perspective.</p>
+
+  <p>Ranking results and presentation layer:<br/>
+  The ranked results will be presented to end users with a feedback loop for improving the recommender.</p>
+
+  <p>P1 pairs will be pushed higher as priority meetings (we get candidates from complementary buckets).</p>
+  <p>P2/P3/pilot pairs are ranked lower as:</p>
+  <ul>
+    <li>Pilot meetings</li>
+    <li>Strategic meetings</li>
+    <li>Keep warm in the future</li>
+  </ul>
+
+  <section id="prototype" class="prototype-link">
+    <h2>Prototype Link</h2>
+    <p>Prototype link: <a href="https://v2-proof-of-match-308044321110.us-west1.run.app/" target="_blank" rel="noopener noreferrer">https://v2-proof-of-match-308044321110.us-west1.run.app/</a></p>
+
+    <h3>Research reference</h3>
+    <p>[1] <a href="https://blockchain-founders.io/how-to-find-investors-as-a-web3-founder/">https://blockchain-founders.io/how-to-find-investors-as-a-web3-founder/</a></p>
+    <p>[2] <a href="https://www.linkedin.com/top-content/networking/using-linkedin-for-networking/how-to-get-warm-vc-introductions-on-linkedin/">https://www.linkedin.com/top-content/networking/using-linkedin-for-networking/how-to-get-warm-vc-introductions-on-linkedin/</a></p>
+    <p>[3] <a href="https://www.linkedin.com/pulse/how-get-warm-intros-right-investors-spendbase-shqae/">https://www.linkedin.com/pulse/how-get-warm-intros-right-investors-spendbase-shqae/</a></p>
+  </section>
+
+</main>
+
+</body>
+</html>
