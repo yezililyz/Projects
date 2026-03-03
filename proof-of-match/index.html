@@ -215,44 +215,6 @@
       color: var(--navy);
     }
 
-    .toc-sources-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      margin: 12px 0 8px;
-    }
-
-    .source-card {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 8px;
-      border-radius: 3px;
-      border: 1px solid var(--border);
-      background: #F7F7F8;
-      margin-bottom: 6px;
-    }
-
-    .source-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-    }
-
-    .source-icon.green { background: #DCFCE7; }
-    .source-icon.blue { background: #DBEAFE; }
-    .source-icon.amber { background: #FEF3C7; }
-    .source-icon.rose { background: #FFE4E6; }
-
-    .source-text {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
     h1, h2, h3 {
       font-family: "Barlow Condensed", system-ui, sans-serif;
       text-transform: uppercase;
@@ -580,38 +542,6 @@
       color: var(--muted);
     }
 
-    .metrics-grid {
-      display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      margin-top: 10px;
-    }
-
-    .metric-card {
-      border: 1px solid var(--border);
-      background: #FDFDFD;
-      padding: 10px 12px;
-      border-radius: 2px;
-    }
-
-    .metric-number {
-      font-family: "Barlow Condensed", system-ui, sans-serif;
-      font-weight: 800;
-      letter-spacing: .12em;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 4px;
-    }
-
-    .metric-label {
-      font-family: "Barlow", system-ui, sans-serif;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--muted);
-    }
-
     .proto-band {
       margin-top: 32px;
       padding: 18px 16px;
@@ -714,6 +644,7 @@
         <a href="#architecture">Architecture</a>
         <a href="#matching">Matching</a>
         <a href="#prototype">Prototype</a>
+        <a href="#references">References</a>
       </nav>
     </div>
   </header>
@@ -828,7 +759,7 @@
           <!-- SIGNALS -->
           <section id="signals">
             <div class="chapter-label">📡 05 — Signals</div>
-            <h2>User research</h2>
+            <h2>User research </h2>
             <p>Which signals actually help people connect in the context of venture capital and web3 space?</p>
             <p>
               From interviews, LinkedIn how‑tos, and founder playbooks, these are the signals that most affect whether someone will take a conversation seriously at Venture capital Web3 events:
@@ -840,7 +771,7 @@
               Investors and founders use stage (pre‑seed/seed/A…) and check size as the first screening: if it doesn’t match, they won’t engage deeply.
               <br>
               But alignment on stage and fund size is usually necessary, not sufficient; it gets you in the “maybe” bucket, not the “I must meet them” bucket.
-              <div class="pull-quote-cite">Stage &amp; fund size</div>
+              <div class="pull-quote-cite">[1] Stage &amp; fund size screening</div>
             </div>
 
             <p>The warm‑intro graph [2] </p>
@@ -1057,24 +988,17 @@
             </div>
           </section>
 
-          <!-- IMPACT / METRICS -->
-          <section id="impact">
-            <div class="chapter-label">📈 Impact / Metrics</div>
-            <h2>Impact &amp; metrics (prototype stage)</h2>
-            <div class="metrics-grid">
-              <div class="metric-card">
-                <div class="metric-number">PIPELINE FIT</div>
-                <div class="metric-label">Deal‑ready shortlist vs. raw list</div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-number">CROSS‑PERSONA MATCHES</div>
-                <div class="metric-label">Non‑obvious, high‑value pairs surfaced</div>
-              </div>
-              <div class="metric-card">
-                <div class="metric-number">SCHEDULE QUALITY</div>
-                <div class="metric-label">Meetings aligned with thesis &amp; readiness</div>
-              </div>
-            </div>
+          <!-- REFERENCES -->
+          <section id="references">
+            <div class="chapter-label">📚 09 — Research References</div>
+            <h2>📚
+Research References</h2>
+            <p>[1]
+Stage &amp; fund size screening for Web3 founders — blockchain-founders.io: How to Find Investors as a Web3 Founder</p>
+            <p>[2]
+Warm intro graph &amp; LinkedIn credibility signals — LinkedIn: How to Get Warm VC Introductions on LinkedIn</p>
+            <p>[3]
+Targeted, contextual outreach to the right investors — LinkedIn Pulse: How to Get Warm Intros to the Right Investors</p>
           </section>
         </main>
 
@@ -1100,26 +1024,8 @@
             <li class="toc-item"><a class="toc-link" href="#architecture"><span>🏗️</span><strong>Architecture</strong></a></li>
             <li class="toc-item"><a class="toc-link" href="#matching"><span>🧮</span><strong>Matching</strong></a></li>
             <li class="toc-item"><a class="toc-link" href="#prototype"><span>🚀</span><strong>Prototype</strong></a></li>
-            <li class="toc-item"><a class="toc-link" href="#impact"><span>📈</span><strong>Impact</strong></a></li>
+            <li class="toc-item"><a class="toc-link" href="#references"><span>📚</span><strong>References</strong></a></li>
           </ul>
-
-          <div class="toc-sources-label">Sources</div>
-          <div class="source-card">
-            <div class="source-icon green">📗</div>
-            <div class="source-text">Founder playbooks &amp; fundraising guides</div>
-          </div>
-          <div class="source-card">
-            <div class="source-icon blue">🔗</div>
-            <div class="source-text">LinkedIn how‑tos &amp; warm intro patterns</div>
-          </div>
-          <div class="source-card">
-            <div class="source-icon amber">🗂️</div>
-            <div class="source-text">VC &amp; Web3 event briefs</div>
-          </div>
-          <div class="source-card">
-            <div class="source-icon rose">🧪</div>
-            <div class="source-text">Prototype interactions &amp; user interviews</div>
-          </div>
         </aside>
       </div>
     </div>
