@@ -28,7 +28,7 @@
     --r2:14px;
     --sh:0 2px 12px rgba(0,0,0,.07);
     --sh2:0 6px 32px rgba(0,0,0,.11);
-    --col:760px;
+    --col:960px;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;font-size:16px;}
@@ -75,6 +75,7 @@
     border-radius:var(--r2);
     box-shadow:var(--sh2);
   }
+
   .hero-eyebrow{
     font-family:var(--head);
     font-size:.8rem;
@@ -159,7 +160,7 @@
     margin-bottom:8px;
   }
   .screenshot-card{
-    background:#111;
+    background:#050608;
     color:#f5f5f5;
     border-radius:10px;
     overflow:hidden;
@@ -176,4 +177,219 @@
     color:#d1d5db;
   }
 
-  .prototype-l
+  .prototype-link{
+    margin-top:24px;
+    padding-top:16px;
+    border-top:1px solid var(--border);
+  }
+
+  @media (min-width:900px){
+    .screenshots-grid{
+      grid-template-columns:1fr 1fr;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="4" width="32" height="32" rx="8" fill="#1F3A5F"/>
+        <path d="M11 28L17 12H19L25 28H22.5L18 16.5L13.5 28H11Z" fill="#FFFFFF"/>
+      </svg>
+    </a>
+    <div class="nav-tagline">Yezi Li · AI Product</div>
+  </div>
+  <div class="nav-links">
+    <a href="#context">Context</a>
+    <a href="#users">Users</a>
+    <a href="#pain-points">Pain points</a>
+    <a href="#signals">Signals</a>
+    <a href="#design">Design</a>
+    <a href="#data">Data</a>
+    <a href="#ml">ML</a>
+    <a href="#prototype">Prototype</a>
+  </div>
+</nav>
+
+<main class="shell">
+
+  <div class="hero-eyebrow">Case study</div>
+  <h1>Proof of Match – AI-powered deal-ready matching for VC &amp; Web3 events</h1>
+  <div class="hero-meta">
+    Role: Product Manager · Year: 2026
+  </div>
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://v2-proof-of-match-308044321110.us-west1.run.app/" target="_blank" rel="noopener noreferrer">
+      View prototype
+    </a>
+  </div>
+
+  <h2 id="context">Context and Vision</h2>
+  <div class="conf-callout">
+    For confidential purposes, this article left out business case and competitor research data. This case is inspired by a real Web3 VC conference brief. All sensitive details have been anonymized or left out.
+  </div>
+
+  <p>High intent small room event organizers such as organizers in the Web3 and Venture capital space are bringing capital, infrastructure, and policy decision makers together, leading to deal‑ready conversations to the table. However, the current networking solution relies on keyword match and search filters to connect decision makers together, resulting in mismatches that are not deal ready and missing inherent signals of mutual interest in discussions.</p>
+
+  <p>By pure keyword match, an investor can be matched with a founder who fits the same thesis and intent but not at the same financial readiness (raising stage), or a founder that is not operationally ready to meet the goal of an allocator. Meanwhile, inherent signals for founders that provide solutions to similar problems might not be proactively provided upfront in the registration form.</p>
+
+  <p>Our goal is to make the platform the driver of trusted, deal-driven relationships for private‑market decision‑makers, bringing deal‑ready conversations to the table. Proof of Match is a high‑end dealflow enabler—an engine for high‑intent, small‑N room events where capital, infrastructure, and policy decisions are made.</p>
+
+  <h2 id="users">User research and JBTD</h2>
+
+  <h3>Investors / allocators</h3>
+  <p>JTBD</p>
+  <ul>
+    <li>Identify a small set of thesis‑fit, deal‑ready founders, infrastructure providers, and co‑investors to add to the pipeline.</li>
+    <li>Understand where capital, regulation, and infrastructure are moving to refine their own theses.</li>
+  </ul>
+
+  <h3>Founders / operators (startups, infra CEOs)</h3>
+  <p>JTBD</p>
+  <ul>
+    <li>Secure strategic capital and a handful of the right partners (design partners, distribution, infrastructure, regulators).</li>
+    <li>Build a targeted investor or partner map they can nurture after the event.</li>
+  </ul>
+
+  <h3>Regulators / policymakers / public-sector innovation leads</h3>
+  <p>JTBD</p>
+  <ul>
+    <li>Find serious builders and allocators to inform frameworks and potential sandboxes.</li>
+    <li>Map the ecosystem’s systemically important actors and risk areas efficiently.</li>
+  </ul>
+
+  <h2 id="pain-points">Common pain points and prioritization</h2>
+  <p>Across 3 personas and the context of short time windows and high‑intent networking events, I identified the following pain points:</p>
+
+  <p><strong>P1 – Right counterpart, actually ready</strong></p>
+  <p class="quote">“As a venture capital networking event attendee, I struggle to find the few people who are both a strong strategic fit and truly ready to do a real deal or pilot in the next cycle, instead of spending time on high‑level chats that go nowhere.”</p>
+
+  <p><strong>P2 – Limited time, multiple intents</strong></p>
+  <p class="quote">“As a venture capital networking event attendee, my time is extremely limited and I have several goals (deploy, raise, find partners, learn), so I need help prioritizing a small number of meetings I can turn into long‑term relationships, not just maximizing random introductions.”</p>
+
+  <p><strong>P3 – Non‑obvious, cross‑persona connections</strong></p>
+  <p class="quote">“As an attendee (investor, founder, regulator, or corporate), I often miss non‑obvious but high‑value connections across roles and verticals (for example, a regulator or infra partner who shares my underlying problem), because current tools only match on surface keywords and titles.”</p>
+
+  <h2 id="signals">User research</h2>
+  <p>Which signals actually help people connect in the context of venture capital and Web3 space?</p>
+  <p>From interviews, LinkedIn how‑tos, and founder playbooks, these are the signals that most affect whether someone will take a conversation seriously at venture capital Web3 events:</p>
+
+  <p><strong>Stage &amp; fund size</strong> <a href="https://blockchain-founders.io/how-to-find-investors-as-a-web3-founder/">[1]</a><br/>
+  Investors and founders use stage (pre‑seed/seed/A…) and check size as the first screening: if it doesn’t match, they won’t engage deeply.<br/>
+  But alignment on stage and fund size is usually necessary, not sufficient; it gets you in the “maybe” bucket, not the “I must meet them” bucket.</p>
+
+  <p><strong>The warm‑intro graph</strong> <a href="https://www.linkedin.com/top-content/networking/using-linkedin-for-networking/how-to-get-warm-vc-introductions-on-linkedin/">[2]</a><br/>
+  Multiple fundraising guides show that successful first raises come via warm introductions, often from portfolio founders.</p>
+
+  <p><strong>Prior relationship &amp; online presence (credibility amplifier)</strong> <a href="https://www.linkedin.com/top-content/networking/using-linkedin-for-networking/how-to-get-warm-vc-introductions-on-linkedin/">[2]</a><br/>
+  A clean, specific LinkedIn and X/warpcast presence (clear what the offering does, what stage you’re at, and what you’re looking for) reinforces in‑person meetings.</p>
+
+  <p><strong>Contextual, specific asks</strong> <a href="https://www.linkedin.com/pulse/how-get-warm-intros-right-investors-spendbase-shqae/">[3]</a><br/>
+  People are far more likely to connect when the ask is narrow and relevant (for example: “we’re a seed‑stage RWA protocol; you backed X and Y – could we get 15 minutes to understand how they approached liquidity incentives?”).</p>
+
+  <p>In summary, what connection signals are:</p>
+  <ul>
+    <li><strong>Thesis fit first:</strong> clear match on sector, stage, geography, and check/token economics so nobody wastes time.</li>
+    <li><strong>Warm intros / shared nodes:</strong> introductions via founders, mutual connections, or small curated circles; these beat cold approaches and raw LinkedIn presence by a wide margin.</li>
+    <li><strong>Proof of work:</strong> visible shipped product, code, traction, or serious research or regulatory engagement; it separates serious actors from tourists and makes everyone (investor, founder, regulator) lean in.</li>
+    <li><strong>Targeted, informed outreach:</strong> showing you understand the other side’s mandate or constraints (fund thesis, startup runway, regulatory remit) makes the conversation feel like collaboration, not a sales pitch.</li>
+  </ul>
+
+  <h2 id="design">Product design and user flow</h2>
+  <p>The user journey of a venture capital Web3 networking event is as follows:</p>
+  <ul>
+    <li>1) Registration</li>
+    <li>2) Onboarding to matchmaking</li>
+    <li>3) Pre‑event matching &amp; scheduling</li>
+    <li>4) Final schedule &amp; on‑site guidance</li>
+  </ul>
+  <p>The matching intelligence starts from the second layer: from quick onboarding to matching and meeting scheduling.</p>
+
+  <h2>Screenshots</h2>
+  <div class="screenshots-grid">
+    <figure class="screenshot-card">
+      <img src="Screenshot 2026-03-03 at 23.03.10.png" alt="Allocator matches view">
+      <figcaption>Allocator matches view with high‑confidence investment meetings and detailed context.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="Screenshot 2026-03-03 at 23.03.18.png" alt="Allocator home view with meeting briefs">
+      <figcaption>Allocator home view summarizing prioritized meeting briefs and categories.</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="data">Data strategy</h2>
+
+  <h3>Data collection and enrichment</h3>
+  <p>The initial registration form only collects basic information: attendee’s name, company, title, ticket type, self-selected interests, and free-text intent or mandate, from which the data gives signals to attendee persona archetypes (investor, founder, regulators), their intents, mandates, and thesis information.</p>
+
+  <p>While the drivers of deal‑flow conversations, according to more in‑depth market and user research above, need enriched signals such as credibility, financial and operational readiness, funding stages, check size, geographic focus, thesis, vertical, regulatory, geography, and compliance tags, and underlying inherent secondary intents.</p>
+
+  <p>Enrichment of data from public sources could provide those contextual data.</p>
+
+  <h3>GenAI agents come in four layers</h3>
+  <ul>
+    <li><strong>Data enrichment:</strong> extract entities from unstructured data and output structured data fields.</li>
+    <li><strong>Embedding and semantic similarity matching:</strong> assess the semantic cosine similarity of thematic overlap and primary/inherent secondary intent match.</li>
+    <li><strong>Individual scoring:</strong> credibility, financial, operational scoring (the caveat here is LLMs could hallucinate and could be bias‑prone; to de‑risk this we need to integrate strict definitions of the scoring system, human in the loop, and guardrails; this part is not covered in the case study and needs domain‑expert review).</li>
+    <li><strong>Pair scoring:</strong> scoring agents assess the pair fit based on persona fit (investor, founder, regulator), theme, intent overlap score, and non‑obvious match score (based on problem space) for each attendee pair.</li>
+    <li><strong>Contextual intro explainer:</strong> translate structured data outputs into actionable insights as a “warm intro” of the connection presented at the UI layer.</li>
+  </ul>
+
+  <h2 id="ml">ML layers</h2>
+
+  <h3>Candidate generation</h3>
+  <p>With the enriched signals, the candidate generation layer will classify the matching pairs into buckets of priorities based on precision: a complementary matching bucket that indicates strong matches with high precision (intents, persona, thesis) and a non‑obvious bucket that encompasses problem space (for example, two founders solving the same problems).</p>
+
+  <h3>Matching score and ranking logic</h3>
+  <p>Matching score is the weighted sum of pair scoring (persona fit, intent, thematic overlap, credibility score, non‑obvious score, complementary score).</p>
+
+  <p>Persona‑specific weight vectors matrix in matching:<br/>
+  The persona‑aware vector matrix should remain as a playbook and configurable as a strategic layer.</p>
+
+  <p>Persona‑specific weight vectors ensure each persona type gets a score relevant to their mandate. As investors, founders, and regulators do not value the same things equally, even for the exact same connection. Depending on who is looking, an institutional allocator will rank a founder who matches their stage and intent much higher than a regulator would, even though they are seeing the same profile.</p>
+
+  <p>For one persona, the matrix is just a small table of “how much this person cares” about each signal, adding up to 100%. For example, for an investor the matrix might say: persona fit 30%, intent overlap 25%, thematic fit 20%, complementary score 15%, non‑obviousness 0%, credibility 10%. When the system scores a potential match for that investor, it multiplies each raw component score by these percentages and sums them, so the things investors care about most (fit and intent) move the final score the most.</p>
+
+  <p>Persona‑aware matrix in ranking:<br/>
+  Playbook weights for counterparty readiness (alpha) and self‑readiness (beta).<br/>
+  Gamma is the persona parameter selecting the readiness dimension for rank_score. 'fin' = financial, 'ops' = operational, 'max' = MAX of both.</p>
+
+  <p>For example:<br/>
+  Investor: α = 0.60, β = 0.05, gamma: "fin"<br/>
+  Regulator: α = 0.20, β = 0.05, gamma: "ops"<br/>
+  In this scenario, gamma is just the switch that chooses which readiness dial to read: for investors, gamma = "fin" means “use the financial ready score in the rank score,” while for regulators, gamma = "ops" means “use the operational ready score instead,” as it matters more to regulators.</p>
+
+  <p>Persona‑aware weighted matrix ensures the rank score is bidirectional.</p>
+
+  <p>Rank_score = Match_score × (1 + α × deal_cpty + β × deal_self). A→B ≠ B→A.</p>
+
+  <p>Same as matching scores, with each persona, the weighted attributes of each counterpart vary, making sure that each person's shortlist is ranked from their own perspective.</p>
+
+  <p>Ranking results and presentation layer:<br/>
+  The ranked results will be presented to end users with a feedback loop for improving the recommender.</p>
+
+  <p>P1 pairs will be pushed higher as priority meetings (we get candidates from complementary buckets).</p>
+  <p>P2/P3/pilot pairs are ranked lower as:</p>
+  <ul>
+    <li>Pilot meetings</li>
+    <li>Strategic meetings</li>
+    <li>Keep warm in the future</li>
+  </ul>
+
+  <section id="prototype" class="prototype-link">
+    <h2>Prototype Link</h2>
+    <p>Prototype link: <a href="https://v2-proof-of-match-308044321110.us-west1.run.app/" target="_blank" rel="noopener noreferrer">https://v2-proof-of-match-308044321110.us-west1.run.app/</a></p>
+
+    <h3>Research reference</h3>
+    <p>[1] <a href="https://blockchain-founders.io/how-to-find-investors-as-a-web3-founder/">https://blockchain-founders.io/how-to-find-investors-as-a-web3-founder/</a></p>
+    <p>[2] <a href="https://www.linkedin.com/top-content/networking/using-linkedin-for-networking/how-to-get-warm-vc-introductions-on-linkedin/">https://www.linkedin.com/top-content/networking/using-linkedin-for-networking/how-to-get-warm-vc-introductions-on-linkedin/</a></p>
+    <p>[3] <a href="https://www.linkedin.com/pulse/how-get-warm-intros-right-investors-spendbase-shqae/">https://www.linkedin.com/pulse/how-get-warm-intros-right-investors-spendbase-shqae/</a></p>
+  </section>
+
+</main>
+
+</body>
+</html>
